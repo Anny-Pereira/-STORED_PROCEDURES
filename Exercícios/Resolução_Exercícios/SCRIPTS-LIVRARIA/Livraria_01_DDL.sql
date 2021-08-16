@@ -26,3 +26,11 @@ autor VARCHAR (50),
 precoLivro SMALLINT
 );
 GO
+
+CREATE TABLE Livrara_Livro (
+id  SMALLINT PRIMARY KEY IDENTITY(1,1),
+idLivro SMALLINT FOREIGN KEY REFERENCES Livro(idLivro),
+idLivraria SMALLINT FOREIGN KEY REFERENCES Livraria(idLivraria),
+idCategoria SMALLINT FOREIGN KEY REFERENCES Categoria(idCategoria)
+);
+GO
